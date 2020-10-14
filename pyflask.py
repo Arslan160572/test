@@ -8,7 +8,7 @@ def hello_admin():
 
 @app.route('/guest/<guest>')
 def hello_guest(guest):
-    return 'Hello %s as guest' %guest
+    return 'Hello %s as guest' % guest
 
 #@app.route('/user/<name>')
 #def hello_user(name):
