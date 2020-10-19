@@ -15,7 +15,7 @@ pipeline {
 	    }
         stage('Three') {
                		sh'python3 pyflask.py'
-			echo "Hello"
+			
                       
         }
         
