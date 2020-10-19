@@ -10,6 +10,7 @@ pipeline {
 	    stage('Two'){
 		    
 		steps {
+			sh'rm -rf test'
 			sh 'git clone https://github.com/Arslan160572/test.git'
         }
 	    }
