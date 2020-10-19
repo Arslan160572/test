@@ -10,18 +10,13 @@ pipeline {
 	    stage('Two'){
 		    
 		steps {
-			input('Do you want to proceed?')
+			git clone https://github.com/Arslan160572/test.git
         }
 	    }
         stage('Three') {
-                when {
-                        not {
-                                branch "master"
-                        }
-                }
-                steps {
+               		sh'python3 pyflask.py'
 			echo "Hello"
-                        }
+                      
         }
         
         }
