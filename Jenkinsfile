@@ -15,7 +15,7 @@ pipeline {
 	    }
         stage('Three') {
 		steps {
-               		sh'python3 pyflask.py'
+               		sh'export PYTHONPATH=$WORKSPACE:$PYTHONPATH'
 		}
                       
         }
