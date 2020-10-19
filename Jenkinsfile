@@ -14,8 +14,9 @@ pipeline {
         }
 	    }
         stage('Three') {
+		steps {
                		sh'python3 pyflask.py'
-			
+		}
                       
         }
         
