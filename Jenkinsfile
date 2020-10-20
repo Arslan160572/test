@@ -1,22 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('One') {
+        stage('Check') {
                 steps {
-                        echo 'Hi, this is Zulaikha from edureka'
+                        echo 'Hi, this is Arslan'
 			
                 }
         }
-	    stage('Two'){
+	    stage('Build'){
 		    
 		steps {
 			sh'rm -rf test'
 			sh 'git clone https://github.com/Arslan160572/test.git'
         }
 	    }
-        stage('Three') {
+        stage('Run') {
 		steps {
                		sh'export PYTHONPATH=$WORKSPACE:$PYTHONPATH'
+			sh'nohup python3 pyflask.py'
 			
 		}
                       
