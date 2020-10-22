@@ -20,7 +20,7 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
-		
+			sh'cd /var/lib/jenkins/workspace/maven/springboot'
                		sh'mvn clean package'
                   sh'java -jar target/myapp-1.0.jar'
 			
