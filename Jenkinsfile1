@@ -14,13 +14,13 @@ pipeline {
 	    stage('Clone'){
 		    
 		steps {
-			sh'rm -rf springboot'
-			sh 'git clone https://github.com/Arslan160572/springboot.git'
+			sh'rm -rf test'
+			sh 'git clone https://github.com/Arslan160572/test.git'
         }
 	    }
         stage('Run') {
 		steps {
-			sh'cd /var/lib/jenkins/workspace/maven/springboot'
+			
                		sh'mvn clean package'
                   sh'java -jar target/myapp-1.0.jar'
 			
