@@ -17,7 +17,7 @@ pipeline {
         stage('Run') {
 		steps {
                		sh'export PYTHONPATH=$WORKSPACE:$PYTHONPATH'
-			sh'nohup python3 pyflask.py'
+			
 			
 		}
                       
