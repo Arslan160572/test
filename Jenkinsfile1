@@ -17,10 +17,10 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
-		
+		withMaven(maven : 'apache-maven-3.6.3') {
                		sh'mvn clean package'
                   sh'java -jar target/myapp-1.0.jar'
-			
+			}
 			
 		}
                       
