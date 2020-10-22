@@ -1,0 +1,29 @@
+
+pipeline {
+    agent any
+    stages {
+        stage('Check') {
+                steps {
+                        echo 'Hi, this is Arslan'
+			
+                }
+        }
+	    stage('Clone'){
+		    
+		steps {
+			sh'rm -rf springboot'
+			sh 'git clone https://github.com/Arslan160572/springboot.git'
+        }
+	    }
+        stage('Run') {
+		steps {
+               		sh'mvn clean package'
+                  sh'java -jar target/myapp-1.0.jar'
+			
+			
+		}
+                      
+        }
+        
+        }
+    }
