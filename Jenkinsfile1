@@ -17,7 +17,7 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
-               		sh'mvn clean package'
+               		sh'mvn clean --file *.pom'
                   sh'java -jar target/myapp-1.0.jar'
 			
 			
