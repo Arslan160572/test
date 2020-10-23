@@ -16,6 +16,7 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
+			sh'pip3 install flask'
                		sh'export PYTHONPATH=$WORKSPACE:$PYTHONPATH'
 			sh'nohup python3 pyflask.py'
 			
