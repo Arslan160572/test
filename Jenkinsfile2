@@ -16,7 +16,7 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
-               		sh'sudo -i -S'
+               		sh'sudo -i '
                   sh'systemctl start nginx'
 	
 			
