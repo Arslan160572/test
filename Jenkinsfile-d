@@ -16,6 +16,7 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
+		sh'usermod -aG docker jenkins'
             	 sh'docker image build -t test1 .'
                   sh'docker run -it -p 80:80 -d test1'
 	
