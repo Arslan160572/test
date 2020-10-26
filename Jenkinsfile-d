@@ -1,5 +1,5 @@
 pipeline {
-    agent docker
+    agent any
     stages {
         stage('Check') {
                 steps {
@@ -16,7 +16,7 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
-            	 docker.build('test1')
+            	 sh'docker image build -t test1 .'
                   sh'docker run -it -p 80:80 -d test1'
 	
 			
