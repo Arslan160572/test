@@ -16,8 +16,8 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
-		app.docker("test1")
-            	 sh'docker image build -t test1 .'
+		docker.build("test1")
+         #   	 sh'docker image build -t test1 .'
                   sh'docker run -it -p 80:80 -d test1'
 	
 			
